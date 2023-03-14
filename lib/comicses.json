@@ -1,0 +1,24 @@
+{
+  "comics": [
+    {
+      "name": "StarBoy",
+      "coverBook": "D:\\Narti_Project\\assets\\comic_book_cover.png",
+      "favourite": "0"
+    },
+    {
+      "name": "StarBoy",
+      "coverBook": "D:\\Narti_Project\\assets\\comic_book_cover.png",
+      "favourite": "0"
+    },
+    {
+      "name": "StarBoy",
+      "coverBook": "D:\\Narti_Project\\assets\\comic_book_cover.png",
+      "favourite": "0"
+    },
+    {
+      "name": "StarBoy",
+      "coverBook": "D:\\Narti_Project\\assets\\comic_book_cover.png",
+      "favourite": "0"
+    }
+  ]
+}
