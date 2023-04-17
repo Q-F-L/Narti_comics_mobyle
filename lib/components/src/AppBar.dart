@@ -1,9 +1,6 @@
 part of '../component.dart';
 
-PreferredSizeWidget MyAppBar(
-    context, void Function() callSetState, bool markerState) {
-  const String star = 'assets/star.svg';
-
+PreferredSizeWidget MyAppBar(context) {
   return AppBar(
     actions: [
       const SizedBox(
@@ -16,8 +13,23 @@ PreferredSizeWidget MyAppBar(
       Expanded(
         flex: 2,
         child: IconButton(
-          icon: SvgPicture.asset(star),
-          onPressed: () {},
+          icon: appBarStar
+              ? SvgPicture.asset('assets/star_full_black.svg')
+              : SvgPicture.asset('assets/star.svg'),
+          onPressed: () {
+            if (appBarStar) {
+              appBarStar = false;
+              Navigator.pop(context);
+            } else if (appBarMarker) {
+              appBarMarker = false;
+              Navigator.pop(context);
+              appBarStar = true;
+              Navigator.pushNamed(context, '/favorites');
+            } else {
+              appBarStar = true;
+              Navigator.pushNamed(context, '/favorites');
+            }
+          },
         ),
       ),
       const SizedBox(
@@ -26,10 +38,23 @@ PreferredSizeWidget MyAppBar(
       Expanded(
         flex: 2,
         child: IconButton(
-          icon: markerState
-              ? SvgPicture.asset('assets/marker.svg')
-              : SvgPicture.asset('assets/marker_full_black.svg'),
-          onPressed: () => callSetState(),
+          icon: appBarMarker
+              ? SvgPicture.asset('assets/marker_full_black.svg')
+              : SvgPicture.asset('assets/marker.svg'),
+          onPressed: () {
+            if (appBarMarker) {
+              appBarMarker = false;
+              Navigator.pop(context);
+            } else if (appBarStar) {
+              appBarStar = false;
+              Navigator.pop(context);
+              appBarMarker = true;
+              Navigator.pushNamed(context, '/marker');
+            } else {
+              appBarMarker = true;
+              Navigator.pushNamed(context, '/marker');
+            }
+          },
         ),
       ),
       const SizedBox(
