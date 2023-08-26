@@ -6,6 +6,7 @@ Widget downPanel(context) {
   const String ellipsis_marker_black = 'assets/ellipsis_marker_black.svg';
 
   return Container(
+    alignment: Alignment.bottomCenter,
     decoration: BoxDecoration(
       color: Theme.of(context).colorScheme.onBackground,
       border: Border(
@@ -29,7 +30,9 @@ Widget downPanel(context) {
               children: [
                 IconButton(
                   splashRadius: 1,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/info");
+                  },
                   icon: SvgPicture.asset(info_marker_black),
                 ),
                 Text(
@@ -44,7 +47,9 @@ Widget downPanel(context) {
               children: [
                 IconButton(
                   splashRadius: 1,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/");
+                  },
                   icon: SvgPicture.asset(book_marker_black),
                 ),
                 Text(

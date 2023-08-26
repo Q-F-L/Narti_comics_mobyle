@@ -2,6 +2,21 @@ part of '../theme.dart';
 
 ThemeData createDarkTheme() {
   return ThemeData(
+    buttonTheme: ButtonThemeData(
+      colorScheme: ColorScheme(
+        brightness: Brightness.dark,
+        primary: AppColors.black,
+        onPrimary: AppColors.greyD0,
+        secondary: AppColors.greyA1,
+        onSecondary: AppColors.greyA1,
+        surface: AppColors.grey71,
+        onSurface: AppColors.grey42,
+        background: AppColors.white,
+        onBackground: AppColors.white,
+        error: AppColors.white,
+        onError: AppColors.white,
+      ),
+    ),
     colorScheme: ColorScheme(
       brightness: Brightness.dark,
       primary: AppColors.black,

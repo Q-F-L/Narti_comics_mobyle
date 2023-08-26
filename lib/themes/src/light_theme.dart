@@ -2,6 +2,22 @@ part of '../theme.dart';
 
 ThemeData createLightTheme() {
   return ThemeData(
+    buttonTheme: ButtonThemeData(
+      colorScheme: ColorScheme(
+        brightness: Brightness.dark,
+        primary: AppColors.black,
+        onPrimary: AppColors.greyD0,
+        secondary: AppColors.greyA1,
+        onSecondary: AppColors.greyA1,
+        surface: AppColors.grey71,
+        onSurface: AppColors.grey42,
+        background: AppColors.white,
+        onBackground: AppColors.white,
+        error: AppColors.white,
+        onError: AppColors.white,
+      ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(fillColor: AppColors.greyD0),
     colorScheme: ColorScheme(
       brightness: Brightness.light,
       primary: AppColors.white,
@@ -34,7 +50,7 @@ ThemeData createLightTheme() {
       headlineSmall: TextStyle(
         leadingDistribution: TextLeadingDistribution.even,
         color: AppColors.grey42,
-        fontSize: 16,
+        fontSize: 14,
         height: 2,
       ), // Текст для кнопки
       headlineMedium: TextStyle(

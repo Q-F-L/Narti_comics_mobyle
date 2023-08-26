@@ -16,6 +16,12 @@ class FavoritesComicsListPage extends StatefulWidget {
 class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
   @override
   Widget build(BuildContext context) {
+    List<Comics> favorites = [];
+
+    for (int i = 0; i < comics.length; i++) {
+      if (comics[i].favorites) favorites.add(comics[i]);
+    }
+
     return Scaffold(
       appBar: MyAppBar(context),
       body: Stack(
@@ -24,7 +30,7 @@ class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
         children: [
           GridView.builder(
               scrollDirection: Axis.vertical,
-              itemCount: 3,
+              itemCount: favorites.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 30,
@@ -52,11 +58,21 @@ class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
                               image: AssetImage('${favorites[index].image}'),
                             ),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  if (favorites[index].favorites) {
+                                    setState(() {
+                                      comics[index].favorites = false;
+                                    });
+                                  } else {
+                                    setState(() {
+                                      comics[index].favorites = true;
+                                    });
+                                  }
+                                },
                                 icon: Icon(
                                   favorites[index].favorites
-                                      ? Icons.star_border
-                                      : Icons.star,
+                                      ? Icons.star
+                                      : Icons.star_border,
                                   color: AppColors.white,
                                 ))
                           ],

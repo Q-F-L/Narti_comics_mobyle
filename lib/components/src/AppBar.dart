@@ -2,6 +2,7 @@ part of '../component.dart';
 
 PreferredSizeWidget MyAppBar(context) {
   return AppBar(
+    leading: Text(""),
     actions: [
       const SizedBox(
         width: 16,
