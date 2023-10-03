@@ -45,8 +45,9 @@ class _InfoPage extends State<InfoPage> {
                         children: [
                           TextButton(
                               style: ButtonStyle(
-                                fixedSize: MaterialStateProperty.all(
-                                    Size(mediaQuery.size.width * 0.4, 29)),
+                                fixedSize: MaterialStateProperty.all(Size(
+                                    mediaQuery.size.width * 0.4,
+                                    mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
@@ -68,8 +69,9 @@ class _InfoPage extends State<InfoPage> {
                               )),
                           TextButton(
                               style: ButtonStyle(
-                                fixedSize: MaterialStateProperty.all(
-                                    Size(mediaQuery.size.width * 0.4, 29)),
+                                fixedSize: MaterialStateProperty.all(Size(
+                                    mediaQuery.size.width * 0.4,
+                                    mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
@@ -95,8 +97,9 @@ class _InfoPage extends State<InfoPage> {
                         right: 0,
                         child: TextButton(
                           style: ButtonStyle(
-                            fixedSize: MaterialStateProperty.all(
-                                Size(mediaQuery.size.width * 0.45, 29)),
+                            fixedSize: MaterialStateProperty.all(Size(
+                                mediaQuery.size.width * 0.45,
+                                mediaQuery.size.height * 0.05)),
                             shadowColor: MaterialStateProperty.all(
                                 Color.fromRGBO(30, 31, 35, 0.5)),
                             elevation: MaterialStateProperty.all(20),
@@ -160,14 +163,16 @@ class _InfoPage extends State<InfoPage> {
                   child: Stack(
                     clipBehavior: Clip.none,
                     children: [
+                      //Здесь ошибка
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           TextButton(
                               style: ButtonStyle(
-                                fixedSize: MaterialStateProperty.all(
-                                    Size(mediaQuery.size.width * 0.4, 29)),
+                                fixedSize: MaterialStateProperty.all(Size(
+                                    mediaQuery.size.width * 0.4,
+                                    mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
@@ -189,8 +194,9 @@ class _InfoPage extends State<InfoPage> {
                               )),
                           TextButton(
                               style: ButtonStyle(
-                                fixedSize: MaterialStateProperty.all(
-                                    Size(mediaQuery.size.width * 0.4, 29)),
+                                fixedSize: MaterialStateProperty.all(Size(
+                                    mediaQuery.size.width * 0.4,
+                                    mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
@@ -217,8 +223,9 @@ class _InfoPage extends State<InfoPage> {
                         // right: 0,
                         child: TextButton(
                           style: ButtonStyle(
-                            fixedSize: MaterialStateProperty.all(
-                                Size(mediaQuery.size.width * 0.45, 29)),
+                            fixedSize: MaterialStateProperty.all(Size(
+                                mediaQuery.size.width * 0.45,
+                                mediaQuery.size.height * 0.05)),
                             shadowColor: MaterialStateProperty.all(
                                 Color.fromRGBO(30, 31, 35, 0.5)),
                             elevation: MaterialStateProperty.all(20),

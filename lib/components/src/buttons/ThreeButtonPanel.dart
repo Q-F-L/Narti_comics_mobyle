@@ -8,8 +8,6 @@ class TreeButtonPanel extends StatefulWidget {
 }
 
 class _TreeButtonPanel extends State<TreeButtonPanel> {
-  late bool _contactView = true, _settingsView = false, _aboutView = false;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +18,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
       height: 40.0,
       child: Row(
         children: [
-          _contactView
+          contactView
               ? Expanded(
                   flex: 6,
                   child: TextButton(
@@ -55,9 +53,9 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     onTap: () {
                       setState(() {
                         Navigator.pushNamed(context, '/contact');
-                        _aboutView = false;
-                        _contactView = true;
-                        _settingsView = false;
+                        aboutView = false;
+                        contactView = true;
+                        settingsView = false;
                       });
                     },
                     child: Text(
@@ -67,7 +65,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     ),
                   ),
                 ),
-          _contactView || _settingsView
+          contactView || settingsView
               ? SizedBox()
               : Expanded(
                   flex: 1,
@@ -78,7 +76,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     color: Theme.of(context).colorScheme.onSecondary,
                   ),
                 ),
-          _settingsView
+          settingsView
               ? Expanded(
                   flex: 7,
                   child: TextButton(
@@ -114,9 +112,9 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                       setState(() {
                         Navigator.pop(context);
                         Navigator.pushNamed(context, '/settings');
-                        _aboutView = false;
-                        _contactView = false;
-                        _settingsView = true;
+                        aboutView = false;
+                        contactView = false;
+                        settingsView = true;
                       });
                     },
                     child: Text(
@@ -126,7 +124,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     ),
                   ),
                 ),
-          _settingsView || _aboutView
+          settingsView || aboutView
               ? SizedBox()
               : Expanded(
                   flex: 1,
@@ -137,7 +135,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     color: Theme.of(context).colorScheme.onSecondary,
                   ),
                 ),
-          _aboutView
+          aboutView
               ? Expanded(
                   flex: 6,
                   child: TextButton(
@@ -172,9 +170,9 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                     onTap: () {
                       setState(() {
                         Navigator.pushNamed(context, '/about');
-                        _aboutView = true;
-                        _contactView = false;
-                        _settingsView = false;
+                        aboutView = true;
+                        contactView = false;
+                        settingsView = false;
                       });
                     },
                     child: Text(

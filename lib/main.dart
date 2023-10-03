@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:narti_project/network/comics/comics.dart';
 import 'package:narti_project/pages/Comics_page.dart';
 import 'package:narti_project/pages/Info_page.dart';
+import 'package:narti_project/pages/about.dart';
 import 'package:narti_project/pages/comic.dart';
 import 'package:narti_project/pages/contact.dart';
 import 'package:narti_project/pages/markerComicsList.dart';
+import 'package:narti_project/pages/settings.dart';
 import 'package:narti_project/themes/theme.dart';
 import 'package:narti_project/pages/favoritesComicsList.dart';
 
@@ -17,15 +19,17 @@ class NartyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: createLightTheme(),
       darkTheme: createDarkTheme(),
-      home: ContactPage(),
-      // routes: {
-      //   '/': (context) => ComicsPage(),
-      //   '/marker': (context) => MarkerComicsListPage(),
-      //   '/favorites': (context) => FavoritesComicsListPage(),
-      //   '/comic': (context) => ComicPage(),
-      //   '/info': (context) => InfoPage(),
-      //   '/contact': (context) => ContactPage()
-      // },
+      // home: ContactPage(),
+      routes: {
+        '/': (context) => ComicsPage(),
+        '/marker': (context) => MarkerComicsListPage(),
+        '/favorites': (context) => FavoritesComicsListPage(),
+        '/comic': (context) => ComicPage(),
+        '/info': (context) => InfoPage(),
+        '/contact': (context) => ContactPage(),
+        '/settings': (context) => SettingPage(),
+        '/about': (context) => AboutPage()
+      },
     );
   }
 }

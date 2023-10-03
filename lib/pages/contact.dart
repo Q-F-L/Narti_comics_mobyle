@@ -125,7 +125,7 @@ class _ContactPage extends State<ContactPage> {
                           hintStyle: Theme.of(context).textTheme.labelLarge),
                     ),
                     SizedBox(
-                      height: 81,
+                      height: 91,
                     ),
                   ],
                 ))

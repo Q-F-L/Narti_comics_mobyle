@@ -31,7 +31,9 @@ Widget downPanel(context) {
                 IconButton(
                   splashRadius: 1,
                   onPressed: () {
-                    Navigator.pushNamed(context, "/info");
+                    if (ModalRoute.of(context)!.settings.name != "/info") {
+                      Navigator.pushNamed(context, "/info");
+                    }
                   },
                   icon: SvgPicture.asset(info_marker_black),
                 ),
@@ -48,7 +50,9 @@ Widget downPanel(context) {
                 IconButton(
                   splashRadius: 1,
                   onPressed: () {
-                    Navigator.pushNamed(context, "/");
+                    if (ModalRoute.of(context)!.settings.name != "/") {
+                      Navigator.pushNamed(context, "/");
+                    }
                   },
                   icon: SvgPicture.asset(book_marker_black),
                 ),
@@ -64,7 +68,11 @@ Widget downPanel(context) {
               children: [
                 IconButton(
                   splashRadius: 1,
-                  onPressed: () {},
+                  onPressed: () {
+                    if (ModalRoute.of(context)!.settings.name != "/contact") {
+                      Navigator.pushNamed(context, "/contact");
+                    }
+                  },
                   icon: SvgPicture.asset(ellipsis_marker_black),
                 ),
                 Text(

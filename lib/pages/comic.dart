@@ -20,7 +20,7 @@ class _ComicPage extends State<ComicPage> {
   int? maxLength = 0;
   late final PageController _pageController;
   late int page;
-  bool _visibilityOfTheBottomPanel = true;
+  bool _visibilityOfTheBottomPanel = false;
   late Future<RC> data;
 
   @override
@@ -70,7 +70,7 @@ class _ComicPage extends State<ComicPage> {
                   },
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.80,
+                    height: MediaQuery.of(context).size.height * 0.89,
                     child: InteractiveViewer(
                       maxScale: 3,
                       minScale: 1,
@@ -99,7 +99,7 @@ class _ComicPage extends State<ComicPage> {
                           } else if (snapshot.hasError) {
                             return Text("Error: ${snapshot.error}");
                           } else {
-                            return Text("Загрузка...");
+                            return Center(child: Text("Загрузка..."));
                           }
                         },
                       ),
