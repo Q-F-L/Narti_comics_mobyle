@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:narti_project/network/comics/comics.dart';
-
 final favorites = [
   Comics(
       id: 13,

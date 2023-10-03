@@ -1,6 +1,6 @@
 part of '../component.dart';
 
-PreferredSizeWidget AppBarComic(context) {
+PreferredSizeWidget appBarComic(context) {
   return AppBar(
     leading: IconButton(
         onPressed: () {

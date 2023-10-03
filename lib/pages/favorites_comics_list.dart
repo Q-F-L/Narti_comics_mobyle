@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/network/comics/marker.dart';
-import 'package:narti_project/pages/Comics_page.dart';
 import '../components/component.dart';
 import '../themes/theme.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class FavoritesComicsListPage extends StatefulWidget {
   const FavoritesComicsListPage({super.key});
@@ -23,7 +20,7 @@ class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
     }
 
     return Scaffold(
-      appBar: MyAppBar(context),
+      appBar: myAppBar(context),
       body: Stack(
         alignment: AlignmentDirectional.bottomStart,
         fit: StackFit.loose,
@@ -55,7 +52,7 @@ class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
                           alignment: Alignment.topRight,
                           children: [
                             Image(
-                              image: AssetImage('${favorites[index].image}'),
+                              image: AssetImage(favorites[index].image),
                             ),
                             IconButton(
                                 onPressed: () {
@@ -78,7 +75,7 @@ class _FavoritesComicsListPage extends State<FavoritesComicsListPage> {
                           ],
                         ),
                         Text(
-                          "${favorites[index].name}",
+                          favorites[index].name,
                           style: Theme.of(context).textTheme.titleLarge,
                         )
                       ],

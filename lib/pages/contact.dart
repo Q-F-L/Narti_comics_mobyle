@@ -1,13 +1,5 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/parser.dart';
-import 'package:narti_project/network/comics/comic.dart';
-import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/network/comics/marker.dart';
-import 'package:narti_project/pages/Comics_page.dart';
 import '../components/component.dart';
-import '../themes/theme.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
@@ -25,14 +17,14 @@ class _ContactPage extends State<ContactPage> {
         fit: StackFit.passthrough,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: ListView(
               children: [
-                TreeButtonPanel(),
+                const TreeButtonPanel(),
                 Container(
                   alignment: Alignment.topLeft,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
-                  child: Text(
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
+                  child: const Text(
                     "Мах социалон сетьты",
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.left,
@@ -40,40 +32,40 @@ class _ContactPage extends State<ContactPage> {
                 ),
                 infoLink(context, "https://vm.tiktok.com/ZSeQyUMnP/",
                     "tiktok_marker1.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 infoLink(
                     context,
                     "https://instagram.com/narty_project?utm_medium=copy_link",
                     "instagram_marker.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 infoLink(context, "https://t.me/narty_project",
                     "telegram_marker.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 infoLink(
                     context, "https://vk.com/narty_project", "vk_marker.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 infoLink(context, "https://www.facebook.com/project.narty/",
                     "facebook_marker.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 infoLink(context, "https://twitter.com/narty_project",
                     "twitter_marker.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 5),
-                  child: Text(
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                  child: const Text(
                     "Фыстæг авритын",
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.left,
@@ -81,7 +73,7 @@ class _ContactPage extends State<ContactPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                   child: Text(
                     "Ам дæ бон у махæн фарста æви фыстæг арвитын, æмæ мах зæрдæдиагæй дзуапп ратджыстæм!",
                     style: TextStyle(
@@ -95,7 +87,7 @@ class _ContactPage extends State<ContactPage> {
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(
+                          border: const OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide.none),
@@ -104,7 +96,7 @@ class _ContactPage extends State<ContactPage> {
                           hintText: "Дæ пост",
                           hintStyle: Theme.of(context).textTheme.labelLarge),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     TextField(
@@ -112,10 +104,10 @@ class _ContactPage extends State<ContactPage> {
                       minLines: 7,
                       maxLines: 10,
                       decoration: InputDecoration(
-                          contentPadding: EdgeInsets.fromLTRB(10, 10, 5, 10),
+                          contentPadding: const EdgeInsets.fromLTRB(10, 10, 5, 10),
                           isCollapsed: true,
                           alignLabelWithHint: true,
-                          border: OutlineInputBorder(
+                          border: const OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide.none),
@@ -124,7 +116,7 @@ class _ContactPage extends State<ContactPage> {
                           hintText: "Фарста кæнæ фæндон",
                           hintStyle: Theme.of(context).textTheme.labelLarge),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 91,
                     ),
                   ],

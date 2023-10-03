@@ -9,12 +9,12 @@ class RC {
 
   RC.fromJson(Map<String, dynamic> json) {
     success = json['success'];
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['success'] = this.success;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['success'] = success;
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
@@ -55,26 +55,26 @@ class Data {
     if (json['pages'] != null) {
       pages = <Pages>[];
       json['pages'].forEach((v) {
-        pages!.add(new Pages.fromJson(v));
+        pages!.add(Pages.fromJson(v));
       });
     }
-    comic = json['comic'] != null ? new Comic.fromJson(json['comic']) : null;
+    comic = json['comic'] != null ? Comic.fromJson(json['comic']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['lang_id'] = this.langId;
-    data['comic_id'] = this.comicId;
-    data['title'] = this.title;
-    data['description'] = this.description;
-    data['image'] = this.image;
-    data['number'] = this.number;
-    if (this.pages != null) {
-      data['pages'] = this.pages!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['lang_id'] = langId;
+    data['comic_id'] = comicId;
+    data['title'] = title;
+    data['description'] = description;
+    data['image'] = image;
+    data['number'] = number;
+    if (pages != null) {
+      data['pages'] = pages!.map((v) => v.toJson()).toList();
     }
-    if (this.comic != null) {
-      data['comic'] = this.comic!.toJson();
+    if (comic != null) {
+      data['comic'] = comic!.toJson();
     }
     return data;
   }
@@ -94,10 +94,10 @@ class Pages {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['page_number'] = this.pageNumber;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['page_number'] = pageNumber;
+    data['image'] = image;
     return data;
   }
 }
@@ -114,9 +114,9 @@ class Comic {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
     return data;
   }
 }

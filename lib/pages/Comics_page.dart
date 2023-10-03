@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/network/comics/marker.dart';
-import 'package:narti_project/pages/favoritesComicsList.dart';
 import '../components/component.dart';
 import '../themes/theme.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ComicsPage extends StatefulWidget {
   const ComicsPage({super.key});
@@ -17,7 +14,7 @@ class _ComicsPage extends State<ComicsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(context),
+      appBar: myAppBar(context),
       body: Stack(
         alignment: AlignmentDirectional.bottomStart,
         fit: StackFit.loose,
@@ -25,14 +22,14 @@ class _ComicsPage extends State<ComicsPage> {
           GridView.builder(
               scrollDirection: Axis.vertical,
               itemCount: comics.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 30,
                 crossAxisSpacing: 13,
                 mainAxisExtent: 240,
               ),
-              padding:
-                  EdgeInsets.only(top: 17, left: 16, right: 16, bottom: 85),
+              padding: const EdgeInsets.only(
+                  top: 17, left: 16, right: 16, bottom: 85),
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
@@ -46,14 +43,14 @@ class _ComicsPage extends State<ComicsPage> {
                       decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.onPrimary,
                           borderRadius: BorderRadius.circular(10.0)),
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Column(
                         children: <Widget>[
                           Stack(
                             alignment: Alignment.topRight,
                             children: [
                               Image(
-                                image: AssetImage('${comics[index].image}'),
+                                image: AssetImage(comics[index].image),
                               ),
                               IconButton(
                                   onPressed: () {
@@ -76,7 +73,7 @@ class _ComicsPage extends State<ComicsPage> {
                             ],
                           ),
                           Text(
-                            "${comics[index].name}",
+                            comics[index].name,
                             style: Theme.of(context).textTheme.titleLarge,
                           )
                         ],

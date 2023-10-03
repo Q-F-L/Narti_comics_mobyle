@@ -21,7 +21,6 @@ class _InfoPage extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    Alignment alignment = Alignment.topLeft;
     return Scaffold(
       body: Stack(
         alignment: AlignmentDirectional.bottomStart,
@@ -32,7 +31,7 @@ class _InfoPage extends State<InfoPage> {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Container(
                   alignment: Alignment.center,
                   // child: scrolPanel2(alignment, mediaQuery, context),
@@ -49,13 +48,13 @@ class _InfoPage extends State<InfoPage> {
                                     mediaQuery.size.width * 0.4,
                                     mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
+                                    const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                             topLeft: Radius.circular(10.0),
                                             bottomLeft:
                                                 Radius.circular(10.0)))),
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromRGBO(208, 208, 208, 1)),
+                                    const Color.fromRGBO(208, 208, 208, 1)),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -73,13 +72,13 @@ class _InfoPage extends State<InfoPage> {
                                     mediaQuery.size.width * 0.4,
                                     mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
+                                    const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                             topRight: Radius.circular(10.0),
                                             bottomRight:
                                                 Radius.circular(10.0)))),
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromRGBO(208, 208, 208, 1)),
+                                    const Color.fromRGBO(208, 208, 208, 1)),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -101,10 +100,10 @@ class _InfoPage extends State<InfoPage> {
                                 mediaQuery.size.width * 0.45,
                                 mediaQuery.size.height * 0.05)),
                             shadowColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 31, 35, 0.5)),
+                                const Color.fromRGBO(30, 31, 35, 0.5)),
                             elevation: MaterialStateProperty.all(20),
                             shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
+                                const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)))),
                             backgroundColor:
@@ -120,7 +119,7 @@ class _InfoPage extends State<InfoPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 18),
+                const SizedBox(height: 18),
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 15.0,
@@ -130,7 +129,7 @@ class _InfoPage extends State<InfoPage> {
                   child: Text(
                     "Для народов Кавказа всегда была важна преемственность поколений и сохранение культурного кода. Нартский эпос, как мы ранее отмечали, является уникальным наследием многих народов. Он издается в виде больших и сложных книг, формат которых в настоящее время устарел, и для эффективного восприятия и усвоения информации не подходит. К сожалению, молодежь не читает его и, соответственно, имеет низкий уровень знаний о культуре своего народа.",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
                 Image.asset("assets/Narty2.png"),
@@ -143,10 +142,10 @@ class _InfoPage extends State<InfoPage> {
                   child: Text(
                     "Командой проекта были проведены опросы, по результатам которых выяснилось, что целевая аудитория предпочитает графический формат, который свойственен для западной и восточной культуры, что в свою очередь, негативно влияет на уровень патриотизма и национальной идентичности. В связи с этим было принято решение адаптировать сказания Нартского эпоса под формат «рассказа в рисунках», а также разработать приложение для их чтения. При этом, все сюжетные линии и описания персонажей были сохранены и согласованы с историками-нартоведами.",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 83.0,
                 )
               ],
@@ -157,7 +156,7 @@ class _InfoPage extends State<InfoPage> {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Container(
                   alignment: Alignment.center,
                   child: Stack(
@@ -174,13 +173,13 @@ class _InfoPage extends State<InfoPage> {
                                     mediaQuery.size.width * 0.4,
                                     mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
+                                    const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                             topLeft: Radius.circular(10.0),
                                             bottomLeft:
                                                 Radius.circular(10.0)))),
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromRGBO(208, 208, 208, 1)),
+                                    const Color.fromRGBO(208, 208, 208, 1)),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -198,13 +197,13 @@ class _InfoPage extends State<InfoPage> {
                                     mediaQuery.size.width * 0.4,
                                     mediaQuery.size.height * 0.05)),
                                 shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
+                                    const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                             topRight: Radius.circular(10.0),
                                             bottomRight:
                                                 Radius.circular(10.0)))),
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromRGBO(208, 208, 208, 1)),
+                                    const Color.fromRGBO(208, 208, 208, 1)),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -227,10 +226,10 @@ class _InfoPage extends State<InfoPage> {
                                 mediaQuery.size.width * 0.45,
                                 mediaQuery.size.height * 0.05)),
                             shadowColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 31, 35, 0.5)),
+                                const Color.fromRGBO(30, 31, 35, 0.5)),
                             elevation: MaterialStateProperty.all(20),
                             shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
+                                const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)))),
                             backgroundColor:
@@ -247,7 +246,7 @@ class _InfoPage extends State<InfoPage> {
                   ),
                 ),
                 Image.asset("assets/Image2.png"),
-                SizedBox(height: 18),
+                const SizedBox(height: 18),
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 15.0,
@@ -257,7 +256,7 @@ class _InfoPage extends State<InfoPage> {
                   child: Text(
                     "Дорогой читатель, приветствую тебя! Я - Сказитель. Буду рассказывать тебе здесь захватывающие сказания из Нартского эпоса. Но прежде чем ты окунёшься в удивительный мир нартов, хочу поведать тебе о самом эпосе.",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
                 const Divider(
@@ -277,7 +276,7 @@ class _InfoPage extends State<InfoPage> {
                   child: Text(
                     "Нартский эпос – сборник сказаний народов Кавказа, своеобразный свод нравственных правил, энциклопедия воззрений на природу и общество. Он является хранителем культуры народов, фольклорным памятником великим героям и событиям прошлого, собранием образцов, на которых воспитывались сотни поколений.",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
                 const Divider(
@@ -293,10 +292,10 @@ class _InfoPage extends State<InfoPage> {
                   child: Text(
                     "Главные персонажи сказаний – нарты. В эпосе они описаны, как бесстрашные и жизнерадостные, свободолюбивые и мудрые герои. Сказания о нартах хранят множество деталей и сюжетов, совпадающих с описаниями скифских и аланских обычаев. Кроме того, повседневная домашняя жизнь нартов, как она отражена в сказаниях, практически не отличается от старого кавказского быта. Со славными нартами ты сможешь познакомиться в разделе «Сказания». Приятного прочтения!",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 83.0,
                 )
               ],

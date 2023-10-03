@@ -13,8 +13,8 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
     return Container(
       decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.onPrimary,
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+          borderRadius: const BorderRadius.all(Radius.circular(10))),
+      margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       height: 40.0,
       child: Row(
         children: [
@@ -29,7 +29,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                                     borderRadius: BorderRadius.circular(10.0))),
                         elevation: MaterialStateProperty.all(3),
                         shadowColor: MaterialStateProperty.all(Colors.grey),
-                        minimumSize: MaterialStateProperty.all(Size(100, 50)),
+                        minimumSize: MaterialStateProperty.all(const Size(100, 50)),
                         overlayColor: MaterialStateProperty.all(
                             Theme.of(context).colorScheme.primary),
                         backgroundColor: MaterialStateProperty.all(
@@ -66,7 +66,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                   ),
                 ),
           contactView || settingsView
-              ? SizedBox()
+              ? const SizedBox()
               : Expanded(
                   flex: 1,
                   child: VerticalDivider(
@@ -87,7 +87,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                                     borderRadius: BorderRadius.circular(10.0))),
                         elevation: MaterialStateProperty.all(3),
                         shadowColor: MaterialStateProperty.all(Colors.grey),
-                        minimumSize: MaterialStateProperty.all(Size(100, 50)),
+                        minimumSize: MaterialStateProperty.all(const Size(100, 50)),
                         overlayColor: MaterialStateProperty.all(
                             Theme.of(context).colorScheme.primary),
                         backgroundColor: MaterialStateProperty.all(
@@ -125,7 +125,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                   ),
                 ),
           settingsView || aboutView
-              ? SizedBox()
+              ? const SizedBox()
               : Expanded(
                   flex: 1,
                   child: VerticalDivider(
@@ -146,7 +146,7 @@ class _TreeButtonPanel extends State<TreeButtonPanel> {
                                     borderRadius: BorderRadius.circular(10.0))),
                         elevation: MaterialStateProperty.all(3),
                         shadowColor: MaterialStateProperty.all(Colors.grey),
-                        minimumSize: MaterialStateProperty.all(Size(100, 50)),
+                        minimumSize: MaterialStateProperty.all(const Size(100, 50)),
                         overlayColor: MaterialStateProperty.all(
                             Theme.of(context).colorScheme.primary),
                         backgroundColor: MaterialStateProperty.all(

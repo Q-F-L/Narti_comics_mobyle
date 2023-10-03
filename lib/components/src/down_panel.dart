@@ -1,9 +1,9 @@
 part of '../component.dart';
 
 Widget downPanel(context) {
-  const String info_marker_black = 'assets/info_marker_black.svg';
-  const String book_marker_black = 'assets/book_marker_black.svg';
-  const String ellipsis_marker_black = 'assets/ellipsis_marker_black.svg';
+  const String infoMarkerBlack = 'assets/info_marker_black.svg';
+  const String bookMarkerBlack = 'assets/book_marker_black.svg';
+  const String ellipsisMarkerBlack = 'assets/ellipsis_marker_black.svg';
 
   return Container(
     alignment: Alignment.bottomCenter,
@@ -18,7 +18,7 @@ Widget downPanel(context) {
     height: 83.0,
     child: Row(
       children: [
-        Expanded(
+        const Expanded(
           flex: 1,
           child: SizedBox(
             width: 50.0,
@@ -35,7 +35,7 @@ Widget downPanel(context) {
                       Navigator.pushNamed(context, "/info");
                     }
                   },
-                  icon: SvgPicture.asset(info_marker_black),
+                  icon: SvgPicture.asset(infoMarkerBlack),
                 ),
                 Text(
                   "Инфо",
@@ -54,7 +54,7 @@ Widget downPanel(context) {
                       Navigator.pushNamed(context, "/");
                     }
                   },
-                  icon: SvgPicture.asset(book_marker_black),
+                  icon: SvgPicture.asset(bookMarkerBlack),
                 ),
                 Text(
                   "Кадджытæ",
@@ -73,7 +73,7 @@ Widget downPanel(context) {
                       Navigator.pushNamed(context, "/contact");
                     }
                   },
-                  icon: SvgPicture.asset(ellipsis_marker_black),
+                  icon: SvgPicture.asset(ellipsisMarkerBlack),
                 ),
                 Text(
                   "Ноджы",
@@ -81,7 +81,7 @@ Widget downPanel(context) {
                 )
               ],
             )),
-        Expanded(
+        const Expanded(
           flex: 1,
           child: SizedBox(
             width: 50.0,

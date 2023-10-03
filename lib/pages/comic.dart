@@ -1,12 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/parser.dart';
 import 'package:narti_project/network/comics/comic.dart';
-import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/network/comics/marker.dart';
-import 'package:narti_project/pages/Comics_page.dart';
 import '../components/component.dart';
-import '../themes/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ComicPage extends StatefulWidget {
@@ -39,14 +33,14 @@ class _ComicPage extends State<ComicPage> {
 
   _prevPage() {
     _pageController.previousPage(
-      duration: Duration(milliseconds: 700),
+      duration: const Duration(milliseconds: 700),
       curve: Curves.ease,
     );
   }
 
   _nextPage() {
     _pageController.nextPage(
-      duration: Duration(milliseconds: 700),
+      duration: const Duration(milliseconds: 700),
       curve: Curves.ease,
     );
   }
@@ -54,7 +48,7 @@ class _ComicPage extends State<ComicPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBarComic(context),
+        appBar: appBarComic(context),
         body: Column(
           children: [
             Stack(
@@ -62,7 +56,7 @@ class _ComicPage extends State<ComicPage> {
               fit: StackFit.loose,
               children: [
                 GestureDetector(
-                  onTapDown: (_tapDownDetails) {
+                  onTapDown: (tapDownDetails) {
                     setState(() {
                       _visibilityOfTheBottomPanel =
                           !_visibilityOfTheBottomPanel;
@@ -88,7 +82,7 @@ class _ComicPage extends State<ComicPage> {
                                 return Image.network(uri);
                               },
                               itemCount: snapshot.data?.data!.pages?.length,
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               controller: _pageController,
                               onPageChanged: (int currentPage) {
                                 setState(() {
@@ -99,7 +93,7 @@ class _ComicPage extends State<ComicPage> {
                           } else if (snapshot.hasError) {
                             return Text("Error: ${snapshot.error}");
                           } else {
-                            return Center(child: Text("Загрузка..."));
+                            return const Center(child: Text("Загрузка..."));
                           }
                         },
                       ),
@@ -127,7 +121,7 @@ class _ComicPage extends State<ComicPage> {
                             ),
                             Expanded(
                               flex: 2,
-                              child: Text("${page + 1}/${maxLength}",
+                              child: Text("${page + 1}/$maxLength",
                                   textAlign: TextAlign.center),
                             ),
                             Expanded(

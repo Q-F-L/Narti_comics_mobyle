@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:narti_project/network/comics/comic.dart';
 import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/pages/Comics_page.dart';
-import 'package:narti_project/pages/favoritesComicsList.dart';
-import 'package:narti_project/pages/markerComicsList.dart';
-import '../themes/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../globalValue.dart';
-import 'package:narti_project/globalValue.dart';
+import '../global_value.dart';
 
-part 'src/AppBar.dart';
-part 'src/AppBarComic.dart';
-part 'src/DownPanel.dart';
-part 'src/findLine.dart';
-part 'src/elementList.dart';
-part 'src/textField/infoLink.dart';
-part 'src/buttons/ThreeButtonPanel.dart';
+part 'src/app_bar.dart';
+part 'src/app_bar_comic.dart';
+part 'src/down_panel.dart';
+part 'src/find_line.dart';
+part 'src/element_list.dart';
+part 'src/textField/info_link.dart';
+part 'src/buttons/three_button_panel.dart';

@@ -2,7 +2,7 @@ part of '../theme.dart';
 
 ThemeData createLightTheme() {
   return ThemeData(
-    buttonTheme: ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       colorScheme: ColorScheme(
         brightness: Brightness.dark,
         primary: AppColors.black,
@@ -17,8 +17,8 @@ ThemeData createLightTheme() {
         onError: AppColors.white,
       ),
     ),
-    inputDecorationTheme: InputDecorationTheme(fillColor: AppColors.greyD0),
-    colorScheme: ColorScheme(
+    inputDecorationTheme: const InputDecorationTheme(fillColor: AppColors.greyD0),
+    colorScheme: const ColorScheme(
       brightness: Brightness.light,
       primary: AppColors.white,
       onPrimary: AppColors.greyD0,
@@ -37,7 +37,7 @@ ThemeData createLightTheme() {
       elevation: 4,
       backgroundColor: AppColors.white,
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyMedium:
           TextStyle(color: AppColors.black, fontSize: 16), // Основной текст
       labelLarge:

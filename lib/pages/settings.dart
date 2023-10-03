@@ -1,13 +1,5 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/parser.dart';
-import 'package:narti_project/network/comics/comic.dart';
-import 'package:narti_project/network/comics/comics.dart';
-import 'package:narti_project/network/comics/marker.dart';
-import 'package:narti_project/pages/Comics_page.dart';
 import '../components/component.dart';
-import '../themes/theme.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});
@@ -28,59 +20,60 @@ class _SettingPage extends State<SettingPage> {
         fit: StackFit.passthrough,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: ListView(
               children: [
-                TreeButtonPanel(),
+                const TreeButtonPanel(),
                 Container(
                   decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.onPrimary,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  padding: EdgeInsets.fromLTRB(5, 10, 5, 10),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10))),
+                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Уведомленитæ',
                             style: TextStyle(fontSize: 16),
                           ),
                           Container(
-                            margin: EdgeInsets.fromLTRB(5, 10, 0, 0),
-                            child: Text(
+                            margin: const EdgeInsets.fromLTRB(5, 10, 0, 0),
+                            child: const Text(
                               'Баиу кæн уведомленитæ, цæмæй ногæй\nмацы рауадзай',
                               style: TextStyle(fontSize: 12),
                             ),
                           )
                         ],
                       ),
-                      CustomSwitcher()
+                      customSwitcher()
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Язык',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                LanguageSwitcher('РУССКИЙ', 0),
-                LanguageSwitcher('ИРОН', 1),
-                LanguageSwitcher('ENGLISH', 2),
-                SizedBox(
+                languageSwitcher('РУССКИЙ', 0),
+                languageSwitcher('ИРОН', 1),
+                languageSwitcher('ENGLISH', 2),
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Тема',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
@@ -89,15 +82,13 @@ class _SettingPage extends State<SettingPage> {
                             Theme.of(context).colorScheme.onPrimary)),
                     onPressed: () {
                       setState(() {
-                        print(MediaQuery.of(context).platformBrightness ==
-                            Brightness.light);
                         ThemeData.light();
                       });
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Урс',
                           style: TextStyle(
                               color: Colors.grey,
@@ -106,12 +97,12 @@ class _SettingPage extends State<SettingPage> {
                         ),
                         MediaQuery.of(context).platformBrightness ==
                                 Brightness.light
-                            ? Icon(
+                            ? const Icon(
                                 Icons.check,
                                 color: Colors.grey,
                                 size: 30.0,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.close,
                                 color: Colors.grey,
                                 size: 30.0,
@@ -124,10 +115,6 @@ class _SettingPage extends State<SettingPage> {
                             Theme.of(context).colorScheme.onPrimary)),
                     onPressed: () {
                       setState(() {
-                        print(MediaQuery.of(context).platformBrightness ==
-                            Brightness.dark);
-                        // print(MediaQuery.of(context).platformBrightness ==
-                        //     Brightness.dark);
                         ThemeData.dark();
                       });
                     },
@@ -143,12 +130,12 @@ class _SettingPage extends State<SettingPage> {
                         ),
                         MediaQuery.of(context).platformBrightness ==
                                 Brightness.dark
-                            ? Icon(
+                            ? const Icon(
                                 Icons.check,
                                 color: Colors.grey,
                                 size: 30.0,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.close,
                                 color: Colors.grey,
                                 size: 30.0,
@@ -164,7 +151,7 @@ class _SettingPage extends State<SettingPage> {
     );
   }
 
-  Widget CustomSwitcher() => Transform.scale(
+  Widget customSwitcher() => Transform.scale(
         scale: 1.5,
         child: Switch(
             activeColor: Colors.amber,
@@ -173,12 +160,12 @@ class _SettingPage extends State<SettingPage> {
             value: _notify,
             onChanged: ((value) => {
                   setState(() {
-                    _notify = value!;
+                    _notify = !value;
                   })
                 })),
       );
 
-  Widget LanguageSwitcher(String langText, int countLang) => ElevatedButton(
+  Widget languageSwitcher(String langText, int countLang) => ElevatedButton(
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
               Theme.of(context).colorScheme.onPrimary)),
@@ -191,17 +178,17 @@ class _SettingPage extends State<SettingPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '$langText',
-            style: TextStyle(
+            langText,
+            style: const TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 20),
           ),
           _language == countLang
-              ? Icon(
+              ? const Icon(
                   Icons.check,
                   color: Colors.grey,
                   size: 30.0,
                 )
-              : Icon(
+              : const Icon(
                   Icons.close,
                   color: Colors.grey,
                   size: 30.0,

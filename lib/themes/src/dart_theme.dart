@@ -2,7 +2,7 @@ part of '../theme.dart';
 
 ThemeData createDarkTheme() {
   return ThemeData(
-    buttonTheme: ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       colorScheme: ColorScheme(
         brightness: Brightness.dark,
         primary: AppColors.black,
@@ -17,7 +17,7 @@ ThemeData createDarkTheme() {
         onError: AppColors.white,
       ),
     ),
-    colorScheme: ColorScheme(
+    colorScheme: const ColorScheme(
       brightness: Brightness.dark,
       primary: AppColors.black,
       onPrimary: AppColors.grey42,
@@ -36,7 +36,7 @@ ThemeData createDarkTheme() {
       elevation: 4,
       backgroundColor: AppColors.black,
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyMedium:
           TextStyle(color: AppColors.white, fontSize: 16), // Основной текст
       labelLarge:
